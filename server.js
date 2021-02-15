@@ -15,10 +15,12 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/budget", {
+mongoose.connect("mongodb://localhost/enigmatic-dusk", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
   useFindAndModify: false,
-  useUnifiedTopology: true
+  
 });
 
 // routes
