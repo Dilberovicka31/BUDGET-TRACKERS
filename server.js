@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/enigmatic-dusk", {
+mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost/enigmatic-dusk", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
